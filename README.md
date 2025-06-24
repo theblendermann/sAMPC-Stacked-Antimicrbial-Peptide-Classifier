@@ -6,7 +6,7 @@ Antimicrobial Peptides (AMPs) are short peptide chains, usually 10 to 60 amino a
 
 Antimicrobial peptides are not highly conserved, database search tools like BLASTp often fail to find novel AMPs. Computational methods, specifically various machine learning algorithms have been used to identify new AMPs. Even though AMPs do not have a conserved amino acid sequence, they do still exhibit physicochemical properties that are characteristic to them. Various prediction tools use these properties to distinguish between AMPs and Non-AMPs. In 2009, CAMP was set up with multiple prediction tools, a Random Forest, a Support Vector Machine and a Discriminant Analysis model that were trained on 64 physicochemical features Thomas et al. (2009). In 2018, AMPeP was made public, it is a Random Forest Algorithm that was trained on 105 features and has the highest Matthew’s Correlation Coefficient to date making it one of the top performing AMP prediction algorithms, the exact features will be discussed later as the AMPeP features have been used here Bhadra et al. (2018). DeepAMPeP30 is a neural network trained to predict short AMPs (<=30). In 2020, the MACREL pipeline was made available and had one of the highest precision benchmarked Santos-Júnior et al. (2020). The classifier in the MACREL pipeline was trained on 22 features, two being repurposed from AMPeP with 3 being novel. While the MACREL classifier had a high precision, it did come at the cost of recall (how many AMPs it was able to detect). 
 
-## AMPeP Features
+### AMPeP Features
 The AMPeP feature set described by Bhadra et al. (2018) can be broadly divided into 7 major descriptors, these descriptors divide amino acids into three classes, class1, class2 and class3. A score is calculated based on the position of amino acids at the first position, 25% residue, 50% residue, 75% residue, and 100% residue of a class in a peptide chain. These descriptors are
 1.	**Hydrophobicity:** Divides the amino acids into three classes, class1 for polar amino acids, class2 for neutral amino acids, and class3 for hydrophobic amino acids. 
 2.	**Normalized van der Waals Volume:** In this case it is the volume occupied by a molecule that is enclosed within a van der Waals surface. These are experimentally derived, but for this study they were obtained from Table 7 provided by Bhadra et al. (2018). The descriptor divides the amino acids into three classes based on the volume occupied, class1 for amino acids with a volume in the range 0 - 2.78, class2 for the range 2.95 - 4.0, and class3 for the range 4.03 - 8.08.
@@ -16,7 +16,7 @@ The AMPeP feature set described by Bhadra et al. (2018) can be broadly divided i
 6.	**Solvent Accessibility:** Divides the amino acids based on their position in a peptide, class1 for amino acids that are buried, class2 for amino acids that are exposed, class3 for amino acids that are partially buried.
 7.	**Secondary Structure:** Divides the amino acids based on their involvement in peptide secondary structure, class1 for amino acids involved in a helical structure, class2 for strands, and class3 for coils.
 
-## MACREL Classifier Features
+### MACREL Classifier Features
 The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can be divided into two main groups, Global descriptors and Local descriptors. The local descriptors are calculated based on the first occurrence of a residue in a peptide sequence.
 1.	**Global Descriptors**
 -	**Charge and Solubility:** Charge and isoelectric point of a peptide, calculated using the peptides library in python.
@@ -26,6 +26,6 @@ The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can 
     -	**Aliphatic Index:** It is the volume occupied by aliphatic amino acids like Alanine, Isoleucine, Leucine, and Valine. Calculated using the peptides library.
 -	**Hydrophobicity and Hydrophobic Moment:** Hydrophobic Moment is an estimate of amphiphilicity of a peptide and hydrophobicity is how soluble the peptide is in water.
 -	**Amino Acid Composition:** These descriptors describe the physico-chemical properties of the peptides. These properties include, charge, and type of amino acid residue.
-2.	Local Descriptors
--	Free Energy of Transition: It is the estimated change in free energy when a peptide moves from a random coil in an aqueous environment to an organized structure in a lipid environment. It can help estimate the likelihood of each amino acid to promote protein folding. FET divides the amino acids into three classes, class1 low energy change, class2 for moderate energy change, and class3 for high energy change.
--	Solvent Accessibility: As defined by Bhadra et al. (2018)
+2.	**Local Descriptors**
+-	**Free Energy of Transition:** It is the estimated change in free energy when a peptide moves from a random coil in an aqueous environment to an organized structure in a lipid environment. It can help estimate the likelihood of each amino acid to promote protein folding. FET divides the amino acids into three classes, class1 low energy change, class2 for moderate energy change, and class3 for high energy change.
+-	**Solvent Accessibility:** As defined by Bhadra et al. (2018)
