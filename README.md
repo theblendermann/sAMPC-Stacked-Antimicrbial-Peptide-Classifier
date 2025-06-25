@@ -34,9 +34,9 @@ The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can 
 -	**Solvent Accessibility:** As defined by Bhadra et al. (2018)
 
 ### References
-Huan, Y., Kong, Q., Mou, H., & Yi, H. (2020). Antimicrobial Peptides: Classification, Design, Application and Research Progress in Multiple Fields. Frontiers in Microbiology, 11. https://doi.org/10.3389/fmicb.2020.582779
-Zhang, Q.-Y., Yan, Z.-B., Meng, Y.-M., Hong, X.-Y., Shao, G., Ma, J.-J., Cheng, X.-R., Liu, J., Kang, J., & Fu, C.-Y. (2021). Antimicrobial peptides: mechanism of action, activity and clinical potential. Military Medical Research, 8(48), 48. https://doi.org/10.1186/s40779-021-00343-2
-Kumar, P., Kizhakkedathu, J., & Straus, S. (2018). Antimicrobial Peptides: Diversity, Mechanism of Action and Strategies to Improve the Activity and Biocompatibility In Vivo. Biomolecules, 8(1), 4. https://doi.org/10.3390/biom8010004
-Benfield, A. H., & Henriques, S. T. (2020). Mode-of-Action of Antimicrobial Peptides: Membrane Disruption vs. Intracellular Mechanisms. Frontiers in Medical Technology, 2. https://doi.org/10.3389/fmedt.2020.610997
-Bhadra, P., Yan, J., Li, J., Fong, S., & Siu, S. W. I. (2018). AmPEP: Sequence-based prediction of antimicrobial peptides using distribution patterns of amino acid properties and random forest. Scientific Reports, 8(1). https://doi.org/10.1038/s41598-018-19752-w
-Santos-Júnior, C. D., Pan, S., Zhao, X.-M., & Coelho, L. P. (2020). Macrel: antimicrobial peptide screening in genomes and metagenomes. PeerJ, 8, e10555. https://doi.org/10.7717/peerj.10555
+- Huan, Y., Kong, Q., Mou, H., & Yi, H. (2020). Antimicrobial Peptides: Classification, Design, Application and Research Progress in Multiple Fields. Frontiers in Microbiology, 11. https://doi.org/10.3389/fmicb.2020.582779
+- Zhang, Q.-Y., Yan, Z.-B., Meng, Y.-M., Hong, X.-Y., Shao, G., Ma, J.-J., Cheng, X.-R., Liu, J., Kang, J., & Fu, C.-Y. (2021). Antimicrobial peptides: mechanism of action, activity and clinical potential. Military Medical Research, 8(48), 48. https://doi.org/10.1186/s40779-021-00343-2
+- Kumar, P., Kizhakkedathu, J., & Straus, S. (2018). Antimicrobial Peptides: Diversity, Mechanism of Action and Strategies to Improve the Activity and Biocompatibility In Vivo. Biomolecules, 8(1), 4. https://doi.org/10.3390/biom8010004
+- Benfield, A. H., & Henriques, S. T. (2020). Mode-of-Action of Antimicrobial Peptides: Membrane Disruption vs. Intracellular Mechanisms. Frontiers in Medical Technology, 2. https://doi.org/10.3389/fmedt.2020.610997
+- Bhadra, P., Yan, J., Li, J., Fong, S., & Siu, S. W. I. (2018). AmPEP: Sequence-based prediction of antimicrobial peptides using distribution patterns of amino acid properties and random forest. Scientific Reports, 8(1). https://doi.org/10.1038/s41598-018-19752-w
+- Santos-Júnior, C. D., Pan, S., Zhao, X.-M., & Coelho, L. P. (2020). Macrel: antimicrobial peptide screening in genomes and metagenomes. PeerJ, 8, e10555. https://doi.org/10.7717/peerj.10555
