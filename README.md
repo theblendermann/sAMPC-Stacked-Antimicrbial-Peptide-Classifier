@@ -17,6 +17,7 @@ The AMPeP feature set described by Bhadra et al. (2018) can be broadly divided i
 7.	**Secondary Structure:** Divides the amino acids based on their involvement in peptide secondary structure, class1 for amino acids involved in a helical structure, class2 for strands, and class3 for coils.
 
 ![Figure 1](Correlograms/Feature_correlogram_AMPeP.png)
+Figure 1: Correlogram of AMPeP Features
 
 ### MACREL Classifier Features
 The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can be divided into two main groups, Global descriptors and Local descriptors. The local descriptors are calculated based on the first occurrence of a residue in a peptide sequence.
@@ -31,3 +32,5 @@ The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can 
 2.	**Local Descriptors**
 -	**Free Energy of Transition:** It is the estimated change in free energy when a peptide moves from a random coil in an aqueous environment to an organized structure in a lipid environment. It can help estimate the likelihood of each amino acid to promote protein folding. FET divides the amino acids into three classes, class1 low energy change, class2 for moderate energy change, and class3 for high energy change.
 -	**Solvent Accessibility:** As defined by Bhadra et al. (2018)
+
+### References
