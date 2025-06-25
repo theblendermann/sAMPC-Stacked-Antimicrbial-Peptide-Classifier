@@ -1,6 +1,4 @@
-# sAMPC: Stacked Antimicrobial Peptide Classifier
-sAMPC is an ensemble model based on the feature sets described in the AMPeP and MACREL papers.
-
+# A bit of background
 ## Antimicrobial Peptides
 Antimicrobial Peptides (AMPs) are short peptide chains, usually 10 to 60 amino acids in length. AMPs can originate from plants, mammals, amphibians, insects, fungi, and bacteria Huan et al. (2020). Antimicrobial peptides are non-enzymatic, i.e. their mechanism of action is usually physical. Most AMPs have a positive charge on them (cationic nature) which allows them to disrupt bacterial membranes that are usually negatively charged or anionic in nature causing the cytoplasmic components to leak out of the cell Zhang et al. (2021), Benfield and Henriques (2020), Kumar et al. (2018).
 
@@ -40,3 +38,9 @@ The MACREL Classifier feature set described by Santos-Júnior et al. (2020) can 
 - Benfield, A. H., & Henriques, S. T. (2020). Mode-of-Action of Antimicrobial Peptides: Membrane Disruption vs. Intracellular Mechanisms. Frontiers in Medical Technology, 2. https://doi.org/10.3389/fmedt.2020.610997
 - Bhadra, P., Yan, J., Li, J., Fong, S., & Siu, S. W. I. (2018). AmPEP: Sequence-based prediction of antimicrobial peptides using distribution patterns of amino acid properties and random forest. Scientific Reports, 8(1). https://doi.org/10.1038/s41598-018-19752-w
 - Santos-Júnior, C. D., Pan, S., Zhao, X.-M., & Coelho, L. P. (2020). Macrel: antimicrobial peptide screening in genomes and metagenomes. PeerJ, 8, e10555. https://doi.org/10.7717/peerj.10555
+
+# The sAMPC function file and Installation
+Before we proceed it must be made clear that a lot of work still needs to be done on sAMPC and the code is still very experimental.
+
+### sAMPC: Stacked Antimicrobial Peptide Classifier
+sAMPC is an ensemble model based on the feature sets described in the AMPeP and MACREL papers.
