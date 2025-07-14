@@ -48,4 +48,22 @@ sAMPC is an ensemble model based on the feature sets described in the AMPeP and 
 ![Figure 2](Model_images/Model_Schema.svg)
 Figure 2: sAMPC Workflow
 
-Figure 2, shown above shows the general work flow of sAMPC. First the protein sequences are stored in a `.fasta` file, for genomic dna Prodigal is first used to identify the protein sequences and then stored in a `.fasta` file. The proteins then need to be passed through the `ampep_feature_extract()` and `macrel_feature_extract()` functions. These features are used as inputs for the base models. Currently, sAMPC has 12 Neural Networks and 7 Random Forest Classifiers that predict using the MACREL feature set and 8 Neural Networks and 5 Random Forest Classifiers that predict using the AMPeP Feature set. All the base models are have different `p:n ratios` and `hidden layer sizes`. Once the base models give their predictions `predict()`, they are averaged. For example, all the Random Forest predictions for the MACREL Feature set are averaged and the results are stored in a column `RF_MACREL_avg`. The averages and the extracted features are then used as inputs for two stacks, `sMACREL` which is a random forest trained on the MACREL feature set & averages and `sAMPeP` which is a random forest classifier trained on the AMPeP feature set & averages. The predictions of these two stacks `predict_proba()` is then averaged to give the final prediction.
+Figure 2, shown above shows the general work flow of sAMPC. First the protein sequences are stored in a `.fasta` file, for genomic dna Prodigal is first used to identify the protein sequences and then stored in a `.fasta` file. The proteins then need to be passed through the `ampep_feature_extract()` and `macrel_feature_extract()` functions. These features are used as inputs for the base models. Currently, sAMPC has 12 Neural Networks and 7 Random Forest Classifiers that predict using the MACREL feature set and 8 Neural Networks and 5 Random Forest Classifiers that predict using the AMPeP Feature set. All the base models are have different `p:n ratios` and `hidden layer sizes`. Once the base models give their predictions `predict()`, they are averaged. For example, all the Random Forest predictions for the MACREL Feature set are averaged and the results are stored in a column `RF_MACREL_avg`. The averages and the extracted features are then used as inputs for two stacks, `sMACREL` which is a random forest trained on the MACREL feature set & averages and `sAMPeP` which is a random forest classifier trained on the AMPeP feature set & averages. The predictions of these two stacks `predict_proba()` is then averaged to give the final prediction. The prediction sets are done by a single function `stack_predictions()`.
+
+### Functions of sAMPC
+**Feature Extraction**
+
+`ampep_feature_extract()` & `macrel_feature_extract()`
+-    protein_data (str): Path to your fasta file. The file extention must be `.fasta`
+-    save_path (str): Path to where you want to save the extracted features. The output will be in `.xlsx`
+
+`stack_predictions()`
+-    RF_MACREL_path (str): Path to the base Random Forest Classifier trained on the MACREL Features. 
+-    RF_AMPeP_path (str): Path to the base Random Forest Classifiers trained on the AMPeP Features.
+-    NN_MACREL_path (str): Path to the base Neural Networks trained on MACREL features.
+-    NN_AMPeP_path (str): Path to the base Neural Networks trained on AMPeP features.
+-    sAMPeP_path (str): Path to the sAMPeP classifier.
+-    sMACREL_path (str): Path to the sMACREL classifier.
+-    MACREL_features (str): Path to MACREL extracted features. The output must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
+-    AMPeP_features (str): Path to AMPeP extracted features. The output must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
+-    test (bool): The input is either True or Flase. test is meant for benchmarking, when the feature set has the ground truth included. When set to `True` it will consider the True classification (AMP or Not AMP, class 1 and class 0) and will remove it from the prediction data frame. If you are benchmarking, make sure you name your ground truth column `Class`.
