@@ -64,6 +64,18 @@ Figure 2, shown above shows the general work flow of sAMPC. First the protein se
 -    NN_AMPeP_path (str): Path to the base Neural Networks trained on AMPeP features.
 -    sAMPeP_path (str): Path to the sAMPeP classifier.
 -    sMACREL_path (str): Path to the sMACREL classifier.
--    MACREL_features (str): Path to MACREL extracted features. The output must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
--    AMPeP_features (str): Path to AMPeP extracted features. The output must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
+-    MACREL_features (str): Path to MACREL extracted features. The input must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
+-    AMPeP_features (str): Path to AMPeP extracted features. The input must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
 -    test (bool): The input is either True or Flase. test is meant for benchmarking, when the feature set has the ground truth included. When set to `True` it will consider the True classification (AMP or Not AMP, class 1 and class 0) and will remove it from the prediction data frame. If you are benchmarking, make sure you name your ground truth column `Class`.
+
+`user_data_train()`
+
+This function basically allows you to input your own protein data and train multiple models (564 per feature set to be exact). It saves all the model metrics in a `.xlsx` file which you can use to select the best models for your own stack. This function does alot but works when everything is properly labeled. My advice would be to not use it yet however here are its inputs for the curious.
+
+-    feature_extracted_data (str): Path to MACREL or AMPeP features. The input must be `.xlsx`. The column names must be ` 'Type (Binary)', 'SEQ', 'NAME', 'Type'` plus whatever column names you get from the feature extraction functions. If not in this format the code will break unless you make the necessary changes in the code itself.
+-    model_type (str): Inputs must be RF, LogReg or NN. The LogReg models were the worst performing models, so they aren't trained anymore, however their code is commented. 
+-    oversampling (bool): Will oversample class 1 (AMPs) when set to `True`
+-    models_parent_dir (str): Path to where you want to save all your models.
+-    user_pn_ratios=None (list): Allows you to test your own p:n ratios. When set to `None` it will use the default.
+-    user_NN_layers=None (list): Allows you to test your own hidden layer sizes for Neural Networks. When set to `None` it will use the default. 
+-    user_testing_data=None (str): Allows you to use your own testing data for base model training. When set to `None` it will use a section of the training data.
