@@ -103,6 +103,29 @@ The dependencies needed are:
 -    `peptides` (https://pypi.org/project/peptides/)
 -    `joblib` (https://pypi.org/project/joblib/#downloads , however it is usually installed)
 
+### Performance
+
+From our testing, using the 920/920 AMP/NAMP becnhmark by Xiao et al 2013
+
+| Method       | Acc. | Sp.   | Sn.   | Pr.   | MCC  | Reference                         |
+|--------------|------|-------|-------|-------|------|-----------------------------------|
+| AmPEP        | 0.98 | -     | -     | -     | 0.92 | Bhadra et al. (2018)              |
+| Macrel       | 0.95 | 0.998 | 0.9   | 0.998 | 0.9  | Santos-Junior et al (2020)        |
+| **cMACREL**  | -    | 0.996 | **0.935**| 0.997 | **0.933**| This study (our clone of MACREL)  |
+| **sAMPC**    | -    | 0.996 | **0.912** | 0.995 | **0.911**| This study                        |
+| **sMACREL**  | -    | 0.987 | 0.907 | 0.986 | 0.896| This study(MACREL stack)          |
+| MacrelX      | 0.95 | 0.97  | 0.94  | 0.97  | 0.91 | Santos-Junior et al (2020)        |
+| **sAMPeP**   | -    | 0.965 | 0.909 | 0.963 | 0.875| This study (AMPeP stack)          |
+| iAMP-2L      | 0.95 | 0.92  | 0.97  | 0.92  | 0.9  | Xiao et al. (2013)                |
+| AMAP         | 0.92 | 0.86  | 0.98  | 0.88  | 0.85 | Gull, Shamim & Minhas (2019)      |
+| CAMPR3-NN    | 0.8  | 0.71  | 0.89  | 0.75  | 0.61 | Waghu et al. (2016)               |
+| APSv2        | 0.78 | 0.57  | 0.99  | 0.7   | 0.61 | Veltri, Kamath & Shehu (2018)     |
+| CAMPR3-DA    | 0.72 | 0.49  | 0.94  | 0.65  | 0.48 | Waghu et al. (2016)               |
+| CAMPR3-SVM   | 0.68 | 0.4   | 0.95  | 0.61  | 0.42 | Waghu et al. (2016)               |
+| CAMPR3-RF    | 0.65 | 0.34  | 0.96  | 0.59  | 0.39 | Waghu et al. (2016)               |
+| iAMPpred     | 0.64 | 0.32  | 0.96  | 0.59  | 0.37 | Meher et al. (2017)               |
+
+
 # Authors
 
 ## theblendermann
@@ -115,4 +138,4 @@ The dependencies needed are:
 ## Dr. Ranjit Kumar
 -    Mail: ranjit.kumar@adypu.edu.in
 
-**Note: Contact Dr Amit Yadav for any queries and theblendermann for any issue regarding sAMPC**
+**Note: Contact Dr Amit Yadav for any queries and theblendermann for any issues regarding sAMPC**
