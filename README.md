@@ -125,6 +125,8 @@ From our testing, using the 920/920 AMP/NAMP becnhmark by Xiao et al 2013
 | CAMPR3-RF    | 0.65 | 0.34  | 0.96  | 0.59  | 0.39 | Waghu et al. (2016)               |
 | iAMPpred     | 0.64 | 0.32  | 0.96  | 0.59  | 0.37 | Meher et al. (2017)               |
 
+### Issues that need to be fixed
+-    The Neural Networks used in sAMPC are not scaled. In our testing the scaled neural networks performed worse than the unscaled Neural Networks, the scaling issue still needs to be fixed.
 
 # Authors
 
