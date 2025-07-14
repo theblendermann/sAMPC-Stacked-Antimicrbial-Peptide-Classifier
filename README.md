@@ -14,7 +14,7 @@ The AMPeP feature set described by Bhadra et al. (2018) can be broadly divided i
 6.	**Solvent Accessibility:** Divides the amino acids based on their position in a peptide, class1 for amino acids that are buried, class2 for amino acids that are exposed, class3 for amino acids that are partially buried.
 7.	**Secondary Structure:** Divides the amino acids based on their involvement in peptide secondary structure, class1 for amino acids involved in a helical structure, class2 for strands, and class3 for coils.
 
-![Figure 1](Correlograms/Feature_correlogram_AMPeP.png)
+![Figure 1](Correlograms/AMPeP_Feature_Correlogram.svg)
 Figure 1: Correlogram of AMPeP Features
 
 ### MACREL Classifier Features
@@ -45,5 +45,6 @@ Before we proceed it must be made clear that a lot of work still needs to be don
 ### sAMPC: Stacked Antimicrobial Peptide Classifier
 sAMPC is an ensemble model based on the feature sets described in the AMPeP and MACREL papers. The sAMPC function file contains 5 main functions, they are `macrel_feature_extract()`, `ampep_feature_extract()`, `user_data_training()`, `stack_train()`, and `stack_predictions()`.
 
-
+![Figure 2](Model_images/Model_Schema.svg)
+Figure 2: sAMPC Workflow
 
