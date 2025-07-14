@@ -68,7 +68,7 @@ Figure 2, shown above shows the general work flow of sAMPC. First the protein se
 -    AMPeP_features (str): Path to AMPeP extracted features. The input must be in `.xlsx` and the column names **should NOT** be tampered with, the code will break if done so.
 -    test (bool): The input is either True or Flase. test is meant for benchmarking, when the feature set has the ground truth included. When set to `True` it will consider the True classification (AMP or Not AMP, class 1 and class 0) and will remove it from the prediction data frame. If you are benchmarking, make sure you name your ground truth column `Class`.
 
-`user_data_train()`
+`user_data_training()`
 
 This function basically allows you to input your own protein data and train multiple models (564 per feature set to be exact). It saves all the model metrics in a `.xlsx` file which you can use to select the best models for your own stack. This function does alot but works when everything is properly labeled. My advice would be to not use it yet however here are its inputs for the curious.
 
@@ -79,3 +79,27 @@ This function basically allows you to input your own protein data and train mult
 -    user_pn_ratios=None (list): Allows you to test your own p:n ratios. When set to `None` it will use the default.
 -    user_NN_layers=None (list): Allows you to test your own hidden layer sizes for Neural Networks. When set to `None` it will use the default. 
 -    user_testing_data=None (str): Allows you to use your own testing data for base model training. When set to `None` it will use a section of the training data.
+
+`stack_train()`
+
+Once the best perfomring models per feature set are selected, copy them to different folders. For example Random Forest classifiers trained on MACREL features can be copied to `sMACREL/RFs` and Random Forest Classifiers trained on AMPeP features can be copied to `sAMPeP/RFs`. The point is the keep the file tree consistent.
+
+-    RF_path (str): Path to the selected Random Forest Classifiers. AMPeP or MACREL.
+-    NN_path (str): Path to the selected Nerual Networks. AMPeP or MACREL. 
+-    stack_save_path (str): Path to where you want to save the stack. 
+-    stack_train_data (str): Path to the training data have you have been using. The function will sample a different subset of data and will not use the exact same subset used to train the base models. 
+-    feature_set (str): Input is 'AMPeP' or 'MACREL'.
+
+### Installation and Dependencies
+
+To use sAMPC, simply download the sAMPC_function_file.py, and the Models. As of now sAMPC can be imported like any normal python library.
+`import sAMPC_function_file.py as sff` and call the functions as you would call any normal function `sff.ampep_feature_extract(protein_data='path/to/fasta/file.fasta', save_path='path/to/save/extracted/features)`.
+
+The dependencies needed are:
+-    `pandas`
+-    `openpyxl` (Because it writes `.xlsx` files)
+-    `Biopython`
+-    `scikit-learn`
+-    `peptides`
+-    `joblib`
+
