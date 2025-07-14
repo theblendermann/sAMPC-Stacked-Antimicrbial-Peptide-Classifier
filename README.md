@@ -96,10 +96,23 @@ To use sAMPC, simply download the sAMPC_function_file.py, and the Models. As of 
 `import sAMPC_function_file.py as sff` and call the functions as you would call any normal function `sff.ampep_feature_extract(protein_data='path/to/fasta/file.fasta', save_path='path/to/save/extracted/features)`.
 
 The dependencies needed are:
--    `pandas`
--    `openpyxl` (Because it writes `.xlsx` files)
--    `Biopython`
--    `scikit-learn`
--    `peptides`
--    `joblib`
+-    `pandas` (https://pandas.pydata.org/docs/getting_started/install.html)
+-    `openpyxl` (Because it writes `.xlsx` files, https://pypi.org/project/openpyxl/)
+-    `Biopython` (https://biopython.org/wiki/Download)
+-    `scikit-learn` (https://scikit-learn.org/stable/install.html)
+-    `peptides` (https://pypi.org/project/peptides/)
+-    `joblib` (https://pypi.org/project/joblib/#downloads , however it is usually installed)
 
+# Authors
+
+## theblendermann
+-    Mail: thebiotechwerido@gmail.com
+
+## Dr. Amit Yadav
+-    Site: https://nccs.res.in/research-scientist/details/41
+-    Mail: amityadav@nccs.res.in
+
+## Dr. Ranjit Kumar
+-    Mail: ranjit.kumar@adypu.edu.in
+
+**Note: Contact Dr Amit Yadav for any queries and theblendermann for any issue regarding sAMPC**
