@@ -128,6 +128,9 @@ From our testing, using the 920/920 AMP/NAMP becnhmark by Xiao et al 2013
 ### Issues that need to be fixed
 -    The Neural Networks used in sAMPC are not scaled. In our testing the scaled neural networks performed worse than the unscaled Neural Networks, the scaling issue still needs to be fixed.
 
+### 🚨 Major Bugs
+-    Major logical bug in the `stack_helper()` function which may have inflated performace metrics. **I am working on a fix.** 
+
 # Authors
 
 ## theblendermann
