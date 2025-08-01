@@ -113,6 +113,7 @@ From our testing, using the 920/920 AMP/NAMP becnhmark by Xiao et al 2013
 | Macrel       | 0.95 | 0.998 | 0.9   | 0.998 | 0.9  | Santos-Junior et al (2020)        |
 | **cMACREL**  | **0.965**| 0.996 | **0.935**| 0.997 | **0.933**| This study (our clone of MACREL)  |
 | **sAMPC**    | 0.954| 0.996 | **0.912** | 0.995 | **0.911**| This study                        |
+| **sAMPC BUG FIX**    | 0.9461| 0.997 | 0.894 | 0.997 | 0.897| This study                       |
 | **sMACREL**  | 0.946    | 0.987 | 0.907 | 0.986 | 0.896| This study(MACREL stack)          |
 | MacrelX      | 0.95 | 0.97  | 0.94  | 0.97  | 0.91 | Santos-Junior et al (2020)        |
 | **sAMPeP**   | 0.937| 0.965 | 0.909 | 0.963 | 0.875| This study (AMPeP stack)          |
@@ -129,7 +130,7 @@ From our testing, using the 920/920 AMP/NAMP becnhmark by Xiao et al 2013
 -    The Neural Networks used in sAMPC are not scaled. In our testing the scaled neural networks performed worse than the unscaled Neural Networks, the scaling issue still needs to be fixed.
 
 ### 🚨 Major Bugs
--    Major logical bug in the `stack_helper()` function which may have inflated performace metrics. **I am working on a fix.** 
+-    Major logical bug in the `stack_helper()` function which may have inflated performace metrics. **I am working on a fix.** UPDATE: The bug did indeed inflate metrics, a fix is in the works along with a bug report.
 
 # Authors
 
